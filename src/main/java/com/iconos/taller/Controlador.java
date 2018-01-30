@@ -1,7 +1,7 @@
 package com.iconos.taller;
 
-import com.ens.user.userprotocol.UserEntity;
-import com.ens.user.userrest.UserRestClient;
+//import com.ens.user.userprotocol.UserEntity;
+//import com.ens.user.userrest.UserRestClient;
 import com.iconos.taller.entidades.Modelo;
 import com.iconos.taller.entidades.Usuario;
 import lombok.RequiredArgsConstructor;
@@ -17,14 +17,15 @@ public class Controlador {
 
     private final Repositorio repo;
 
-    private final UserRestClient userRestClient;// = feign
+//    private final UserRestClient userRestClient;// = feign
 
     @GetMapping
-    public List<UserEntity> holaMundo() {
+    public List<Modelo> holaMundo() {
 
 //        List<UserEntity> users = userRestClient.readAll();
 
-        return userRestClient.readAll();
+//        return userRestClient.readAll();
+        return repo.findAll();
     }
 
 
